@@ -1,0 +1,5 @@
+import { ContactForm } from "@/components/contact-form";
+import { PageHero } from "@/components/page-hero";
+import { site } from "@/lib/site";
+export const metadata={title:"Contact"};
+export default function Contact(){return <><PageHero eyebrow="Get in touch" title="Contact Us"/><section className="container-site grid gap-12 py-20 lg:grid-cols-[.7fr_1.3fr]"><aside className="border-l-2 border-[#a77935] pl-6"><h2 className="serif text-2xl text-[#351016]">Assembly of the Saints Tabernacle</h2><dl className="mt-7 space-y-5 text-sm"><div><dt className="font-bold text-[#6b5a4d]">Location</dt><dd className="mt-1">{site.location}</dd></div><div><dt className="font-bold text-[#6b5a4d]">Phone</dt><dd className="mt-1"><a className="underline hover:text-[#591f2a]" href={site.phoneHref}>{site.phone}</a></dd></div><div><dt className="font-bold text-[#6b5a4d]">Email</dt><dd className="mt-1 break-all"><a className="underline hover:text-[#591f2a]" href={`mailto:${site.email}`}>{site.email}</a></dd></div></dl></aside><div><h2 className="serif mb-7 text-3xl text-[#351016]">Send a message</h2><ContactForm/></div></section></>}

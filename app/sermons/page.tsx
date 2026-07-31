@@ -1,0 +1,3 @@
+import { PageHero } from "@/components/page-hero";
+export const metadata={title:"Sermons"};
+export default function Sermons(){return <><PageHero eyebrow="Teaching from the Word" title="Sermons"/><section className="container-site py-20"><div className="mx-auto max-w-2xl border-y border-[#d8cab3] py-14 text-center"><p className="eyebrow">Resources</p><h2 className="serif mt-4 text-3xl text-[#351016]">Sermon resources will be shared here.</h2><p className="mt-5 leading-8 text-[#5f5753]">This page is prepared for the church&apos;s sermon recordings and messages. Content will be added by the church.</p></div></section></>}

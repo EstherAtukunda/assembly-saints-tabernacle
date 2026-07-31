@@ -1,0 +1,4 @@
+import { PageHero } from "@/components/page-hero";
+export const metadata={title:"Ministries"};
+const ministries=["Choir & Worship","Prayer","Evangelism","Sunday School","Youth Ministry"];
+export default function Ministries(){return <><PageHero eyebrow="Serving together" title="Ministries"/><section className="container-site py-20"><p className="mx-auto max-w-xl text-center leading-8 text-[#5f5753]">Our ministries serve the life of the church and provide opportunities for fellowship, service, and spiritual growth.</p><div className="mx-auto mt-12 grid max-w-4xl gap-px bg-[#d8cab3] sm:grid-cols-2 lg:grid-cols-3">{ministries.map((ministry,index)=><article className="bg-[#faf6ed] p-8" key={ministry}><p className="serif text-2xl text-[#a77935]">0{index+1}</p><h2 className="serif mt-5 text-2xl text-[#351016]">{ministry}</h2></article>)}</div></section></>}

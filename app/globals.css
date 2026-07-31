@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+:root { --burgundy:#591f2a; --burgundy-deep:#351016; --ivory:#faf6ed; --paper:#f4ecdc; --charcoal:#292525; --gold:#a77935; --line:#d8cab3; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { background:var(--ivory); color:var(--charcoal); font-family:Arial, Helvetica, sans-serif; }
+::selection { background:#d9bd88; color:#351016; }
+:focus-visible { outline:3px solid #a77935; outline-offset:3px; }
+.serif { font-family:Georgia, 'Times New Roman', serif; }
+.container-site { width:min(1120px, calc(100% - 2.5rem)); margin-inline:auto; }
+.eyebrow { color:var(--gold); font-size:.72rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+.rule { width:2.75rem; height:1px; background:var(--gold); display:inline-block; vertical-align:middle; margin-right:.7rem; }
+.prose-copy p { margin-top:1rem; line-height:1.8; }
+.nav-link { font-size:.77rem; letter-spacing:.06em; text-transform:uppercase; transition:color .2s; }
+.nav-link:hover { color:var(--gold); }
+.button-primary { display:inline-flex; align-items:center; justify-content:center; background:var(--burgundy); color:white; padding:.85rem 1.25rem; font-size:.78rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; transition:background .2s; }
+.button-primary:hover { background:var(--burgundy-deep); }
+.button-secondary { display:inline-flex; align-items:center; justify-content:center; border:1px solid currentColor; padding:.82rem 1.22rem; font-size:.78rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; transition:background .2s,color .2s; }
+.button-secondary:hover { background:var(--burgundy); border-color:var(--burgundy); color:#fff; }
+.page-hero { background:var(--burgundy-deep); color:#fff; padding:5.5rem 0 4.75rem; }
+.page-title { font-family:Georgia, 'Times New Roman', serif; font-size:clamp(2.5rem,6vw,4.5rem); font-weight:400; line-height:1.06; margin-top:.75rem; }
+.form-input { width:100%; border:1px solid var(--line); background:#fffdf8; padding:.85rem 1rem; color:var(--charcoal); }
+.form-input:focus { border-color:var(--gold); outline:2px solid transparent; }
