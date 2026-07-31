@@ -9,4 +9,4 @@ npm install
 npm run dev
 ```
 
-Before publishing, update `url` in `lib/site.ts` with the church's final domain, replace the pastor-photo placeholder, add the confirmed Google Maps embed on `app/visit-us/page.tsx`, and connect the contact and prayer form handler to the church's chosen secure service.
+Before publishing, add `RESEND_API_KEY` in Vercel Project Settings → Environment Variables to enable Contact Us email delivery. The key is created in the church's free Resend account and must never be placed in this repository. `RESEND_FROM_EMAIL` is optional; add it after verifying the church's own sending domain in Resend.
