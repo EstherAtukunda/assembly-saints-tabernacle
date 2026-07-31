@@ -5,7 +5,7 @@ export const site = {
   phone: "+256 782 387 247",
   phoneHref: "tel:+256782387247",
   email: "assemblyofsaintstabernacle@gmail.com",
-  url: "https://assemblyofsaintstabernacle.org"
+  url: "https://assembly-saints-tabernacle.vercel.app"
 };
 export const navigation = [
   ["Home", "/"], ["About", "/about"], ["Our Pastor", "/our-pastor"], ["What We Believe", "/what-we-believe"], ["Ministries", "/ministries"], ["Sermons", "/sermons"], ["Visit Us", "/visit-us"], ["Contact", "/contact"]
