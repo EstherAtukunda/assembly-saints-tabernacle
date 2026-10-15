@@ -24,7 +24,7 @@ export function ContactForm({ prayer=false }: { prayer?:boolean }) {
   if(sent) return <p className="border-l-4 border-[#a77935] bg-[#f4ecdc] p-5 leading-7">{prayer ? "Thank you. Your prayer request has been received." : contactThanks}</p>;
   return <form onSubmit={submit} className="grid gap-5" aria-label={prayer ? "Prayer request form" : "Contact form"}>
     <div className="grid gap-5 sm:grid-cols-2"><label className="text-sm">Name {prayer&&<span className="text-[#6b6260]">(optional)</span>}<input className="form-input mt-2" name="name" autoComplete="name" required={!prayer}/></label><label className="text-sm">Email {prayer&&<span className="text-[#6b6260]">(optional)</span>}<input className="form-input mt-2" type="email" name="email" autoComplete="email" required={!prayer}/></label></div>
-    {!prayer&&<label className="text-sm">Phone <input className="form-input mt-2" type="tel" name="phone" autoComplete="tel" /></label>}
+    {!prayer&&<><label className="text-sm">Subject <input className="form-input mt-2" name="subject" required /></label><label className="text-sm">Phone <input className="form-input mt-2" type="tel" name="phone" autoComplete="tel" /></label></>}
     <label className="text-sm">{prayer ? "Prayer request" : "Message"}<textarea className="form-input mt-2 min-h-36 resize-y" name="message" required /></label>
     {prayer&&<p className="text-sm leading-6 text-[#6b6260]">You may submit this request anonymously. Please do not include information you would not want shared with the prayer team.</p>}
     {error&&<p className="text-sm text-[#8f1e2d]" role="alert">{error}</p>}

@@ -5,8 +5,8 @@ export const runtime = "nodejs";
 
 /** Delivers Contact Us submissions through Resend. The API key stays private in Vercel. */
 export async function POST(request: Request) {
-  const { name, email, phone, message } = await request.json();
-  if (typeof name !== "string" || typeof email !== "string" || typeof message !== "string" || !name.trim() || !email.trim() || !message.trim()) {
+  const { name, email, subject, phone, message } = await request.json();
+  if (typeof name !== "string" || typeof email !== "string" || typeof subject !== "string" || typeof message !== "string" || !name.trim() || !email.trim() || !subject.trim() || !message.trim()) {
     return NextResponse.json({ error: "Please complete the required fields." }, { status: 400 });
   }
 
@@ -20,8 +20,8 @@ export async function POST(request: Request) {
       from: process.env.RESEND_FROM_EMAIL ?? "Assembly of the Saints Website <onboarding@resend.dev>",
       to: [site.email],
       reply_to: email.trim(),
-      subject: `Website message from ${name.trim()}`,
-      text: `New message from the church website\n\nName: ${name.trim()}\nEmail: ${email.trim()}\nPhone: ${typeof phone === "string" && phone.trim() ? phone.trim() : "Not provided"}\n\nMessage:\n${message.trim()}`
+      subject: `[Church Website] ${subject.trim()}`,
+      text: `New message from the church website\n\nName: ${name.trim()}\nEmail: ${email.trim()}\nPhone: ${typeof phone === "string" && phone.trim() ? phone.trim() : "Not provided"}\nSubject: ${subject.trim()}\n\nMessage:\n${message.trim()}`
     })
   });
 
